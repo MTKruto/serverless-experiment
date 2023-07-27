@@ -5,5 +5,5 @@ export default cleanEnv(Deno.env.toObject(), {
   API_ID: num(),
   API_HASH: str(),
   BOT_TOKEN: str(),
-  DENO_REGION: str()
+  DENO_REGION: str(),
 });
