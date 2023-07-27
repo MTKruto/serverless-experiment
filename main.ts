@@ -19,3 +19,7 @@ await client.connect();
 await client.authorize(env.BOT_TOKEN);
 
 await client.sendMessage("@MTKrutoTest", "Hello from Deno Deploy!");
+
+await client.disconnect();
+
+Deno.exit();
