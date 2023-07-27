@@ -36,7 +36,7 @@ Deno.serve(async (req) => {
 
     await client.sendMessage(
       chat,
-      `Hello from Deno Deploy (${env.DENO_REGION})!`,
+      `${text}\n\n${env.DENO_REGION}`,
     );
 
     await client.disconnect();
