@@ -1,7 +1,7 @@
 import {
   Client,
   httpTransportProvider,
-} from "https://deno.land/x/mtkruto@0.0.969/mod.ts";
+} from "https://deno.land/x/mtkruto@0.0.970/mod.ts";
 import {
   StorageDenoKV,
 } from "https://deno.land/x/mtkruto@0.0.970/storage/1_storage_deno_kv.ts";
