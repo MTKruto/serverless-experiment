@@ -1,10 +1,10 @@
 import {
   Client,
   httpTransportProvider,
-} from "https://deno.land/x/mtkruto@0.0.972/mod.ts";
+} from "https://deno.land/x/mtkruto@0.0.973/mod.ts";
 import {
   StorageDenoKV,
-} from "https://deno.land/x/mtkruto@0.0.972/storage/1_storage_deno_kv.ts";
+} from "https://deno.land/x/mtkruto@0.0.973/storage/1_storage_deno_kv.ts";
 import env from "./env.ts";
 
 const client = new Client(
