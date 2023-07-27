@@ -4,7 +4,7 @@ import {
 } from "https://deno.land/x/mtkruto@0.0.969/mod.ts";
 import {
   StorageDenoKV,
-} from "https://deno.land/x/mtkruto@0.0.969/storage/1_storage_deno_kv.ts";
+} from "https://deno.land/x/mtkruto@0.0.970/storage/1_storage_deno_kv.ts";
 import env from "./env.ts";
 
 const client = new Client(
