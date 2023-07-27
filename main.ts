@@ -21,6 +21,13 @@ Deno.serve(async (req) => {
   if (i.versionstamp != null) {
     return new Response(null, { status: 503 });
   }
+  const lastRequestAt = await kv.get<Date>(["lastRequestAt"]);
+  if (
+    lastRequestAt.value != null &&
+    Date.now() - lastRequestAt.value.getTime() < 2 * 1_000
+  ) {
+    return new Response(null, { status: 429 });
+  }
   await kv.set(["i"], 1);
   try {
     const client = new Client(
@@ -45,5 +52,6 @@ Deno.serve(async (req) => {
     return new Response(Deno.inspect(err, { colors: false }), { status: 500 });
   } finally {
     await kv.delete(["i"]);
+    await kv.set(["lastRequestAt"], new Date());
   }
 });
